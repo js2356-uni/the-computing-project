@@ -1,0 +1,216 @@
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tips-container.light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #333;
+}
+
+.tips-container.dark {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: #e2e8f0;
+}
+
+.tips-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tips-title {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.light .tips-title {
+  border-bottom: none;
+  color: #333;
+}
+
+.dark .tips-title {
+  border-bottom: none;
+  color: #e2e8f0;
+}
+
+.no-tips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.light .no-tips {
+  color: #6c757d;
+}
+
+.dark .no-tips {
+  color: #a0aec0;
+}
+
+.tips-list {
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tip-card {
+  display: flex;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.light .tip-card {
+  background-color: white;
+  border-left: 4px solid #4b70e2;
+}
+
+.dark .tip-card {
+  background-color: #2d3748;
+  border-left: 4px solid #63b3ed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.light .tip-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.dark .tip-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+.tip-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.light .tip-icon {
+  color: #4b70e2;
+}
+
+.dark .tip-icon {
+  color: #63b3ed;
+}
+
+.tip-content {
+  flex-grow: 1;
+}
+
+.tip-content p {
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.light .tip-content p {
+  color: #333;
+}
+
+.dark .tip-content p {
+  color: #e2e8f0;
+}
+
+.tip-dismiss {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.dismiss-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dismiss-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.light .checkmark {
+  background-color: #eee;
+}
+
+.dark .checkmark {
+  background-color: #4a5568;
+}
+
+.light .dismiss-checkbox:hover .checkmark {
+  background-color: #ddd;
+}
+
+.dark .dismiss-checkbox:hover .checkmark {
+  background-color: #718096;
+}
+
+.light .dismiss-checkbox input:checked ~ .checkmark {
+  background-color: #4b70e2;
+}
+
+.dark .dismiss-checkbox input:checked ~ .checkmark {
+  background-color: #63b3ed;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.dismiss-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.dismiss-checkbox .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+} 

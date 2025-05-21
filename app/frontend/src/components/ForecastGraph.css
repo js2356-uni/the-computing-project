@@ -1,0 +1,86 @@
+.forecast-graph-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.forecast-graph-container.light {
+  background: white;
+  color: #333;
+}
+
+.forecast-graph-container.dark {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.forecast-graph-container:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.forecast-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.forecast-title {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.light .forecast-title {
+  color: #333;
+}
+
+.dark .forecast-title {
+  color: #e2e8f0;
+}
+
+.cost-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.light .cost-info {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.dark .cost-info {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.cost-info p {
+  margin: 0;
+}
+
+.chart-container {
+  flex: 1;
+  min-height: 250px;
+  width: 100%;
+}
+
+/* Add this style to ensure chart has enough room */
+canvas {
+  min-height: 250px;
+  margin-bottom: 10px;
+} 

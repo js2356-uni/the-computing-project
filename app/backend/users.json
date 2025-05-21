@@ -1,0 +1,18 @@
+[
+  {
+    "email": "admin@mail",
+    "password": "$2b$10$RcNBBhDYVynCui01S5nBHeMnfICevKZC2te2nkjMKiOLxXzeF5/UK"
+  },
+  {
+    "email": "ytyoyo@mai",
+    "password": "$2b$10$Gb2.ks7gtmHxXpdSCAwgk.kiBp8wrjV0R7zZYdHavuSpFwbBlkhyy"
+  },
+  {
+    "email": "test@brighton.com",
+    "password": "$2b$10$tgnTL.ejHmFr6lVzMcFSMOh9RPUmVfhHWauPUJ/azYHh6uTCYfT96"
+  },
+  {
+    "email": "test@brighton.ac.uk",
+    "password": "$2b$10$6vpvgol9tw2XGYQR8MVAEuIlhm1oSIjXP5XvVhne1MuH.Ty48AUGG"
+  }
+]
